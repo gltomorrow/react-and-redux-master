@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 class ListStaffComponent extends React.Component {
     render(){
         return (
-            <div class="epc-page cf">
-                <div class="default-title"><span class="loc-text">Compensation Rules</span></div>
-                <div class="message-contain">
-                    <div class="message-img">MM</div>
-                    <span class="message-content">This page is only viewable by internal users.</span>
+            <div className="epc-page cf">
+                <div className="default-title"><span className="loc-text">Compensation Rules</span></div>
+                <div className="message-contain">
+                    <div className="message-img">MM</div>
+                    <span className="message-content">This page is only viewable by internal users.</span>
                 </div>
             </div>
         );
