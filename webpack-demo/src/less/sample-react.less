@@ -1,0 +1,35 @@
+@import "../../node_modules/uitoolkit/uitoolkit/src/main/resources/core/styles/mixins.less";
+
+.epc-page {
+	.margin(tr, @baseFontPx, 18, 18);
+	.margin(l, @baseFontPx, 18);
+	@media screen and (max-width: 959px) {
+		.margin(tr, @baseFontPx, 12, 12);
+		.margin(l, @baseFontPx, 12);
+	}
+}
+
+.property-info,
+.property-info-details {
+	.margin(t, @baseFontPx, 12);
+}
+
+.property-info-details {
+	.hotel-image {
+		display: inline-block;
+		.max-height(@baseFontPx, 225);
+        .max-width(@baseFontPx, 225);
+		.padding(r, @baseFontPx, 24);
+	}
+
+	.address {
+		display: inline-block;
+		vertical-align: top;
+		.label {
+			display: inline-block;
+			font-size: 17px;
+			font-weight: bold;
+			.padding(r, @baseFontPx, 6);
+		}
+	}
+}

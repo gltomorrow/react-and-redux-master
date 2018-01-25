@@ -1,0 +1,260 @@
+@import "../../node_modules/uitoolkit/uitoolkit/src/main/resources/core/styles/mixins.less";
+
+.compensation-list > div {
+  .margin(t, @baseFontPx, 14);
+}
+
+body .cols-row {
+  max-width: 80%;
+  margin-left: 0;
+  @media screen and (max-width: 850px) {
+    max-width: 100%;
+  }
+}
+
+body .cols-row-edit {
+  max-width: 63%;
+  margin: 2%;
+}
+
+.cols-row-edit .cols-row + .cols-row, .site-content {
+  padding-top: 0;
+}
+
+@media screen and (max-width: 850px) {
+  body .cols-row-edit {
+    max-width: 100%;
+  }
+}
+
+.compensation-rule {
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #cbcbcb;
+  color: #1f1f1f;
+  line-height: 2.0em;
+  margin-bottom: 0.8em;
+  padding: 0.6em;
+}
+
+.compensation-rule .header div {
+  display: inline-block;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 400;
+  color: #1f1f1f;
+  line-height: 1.35em;
+  position: relative;
+  vertical-align: bottom;
+
+  .titleBadge {
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.secondTitle {
+  font-size: 15px;
+  font-weight: bold;
+  color: #00355f;
+  margin-top: 15px;
+}
+
+.compensation-rule .action {
+  color: #0065b8;
+}
+
+.compensation-rule .body {
+  padding: 3px;
+  font-size: 15px;
+  .titleBadge {
+    line-height: 20px;
+  }
+
+  .detail-left {
+    .title {
+      width: 870px;
+      color: #00355f;
+      float: left;
+      font-weight: normal;
+    }
+
+    .content-oneF {
+      width: 300px;
+      float: left;
+    }
+    .content-oneS {
+      width: 150px;
+      float: left;
+    }
+    .content-oneT {
+      width: 150px;
+      font-size: 13px;
+    }
+
+    .content-up {
+      font-size: 13px;
+      white-space: nowrap;
+      color: #616161;
+      div {
+        float: left;
+        padding-right: 20px;
+        width: 145px;
+      }
+    }
+
+    .content-down {
+      white-space: nowrap;
+      font-weight: normal;
+      color: #1f1f1f;
+      div {
+        float: left;
+        padding-right: 20px;
+        width: 145px;
+      }
+    }
+
+    .content-three {
+      color: #1f1f1f;
+      div {
+        width: 450px;
+      }
+    }
+  }
+
+  .roomType-list {
+    padding-top: 10px;
+    max-height: 500px;
+    overflow-y: auto;
+    .listHeader1 {
+      color: #00355f;
+    }
+    .listHeader2 {
+      color: #0065b8;
+    }
+    .listBody div {
+      color: #616161;
+      font-size: 15px;
+      line-height: 1.4em;
+    }
+    @media screen and (max-width: 850px) {
+      max-height: none;
+    }
+  }
+
+  .mobile {
+    .content-up {
+      font-size: 15px;
+      white-space: nowrap;
+      div {
+        float: left;
+        width: 45%;
+      }
+    }
+
+    .content-down {
+      white-space: nowrap;
+      font-weight: bold;
+      color: #1f1f1f;
+      div {
+        float: left;
+        width: 45%;
+      }
+    }
+  }
+
+}
+
+.compensation-rule .footer {
+  padding: 2px;
+  font-size: 13px;
+  line-height: 1.8em;
+  color: #616161;
+  clear: both;
+}
+
+.compensation-rule {
+
+  .col-9-10 {
+    width: 88%;
+  }
+
+  .col-1-10 {
+    white-space: nowrap;
+    width: 12%;
+  }
+
+  .col-2-10 {
+    width: 20%;
+  }
+
+  .col-4-10 {
+    width: 40%;
+  }
+
+  .col-6-10 {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 850px) {
+    .col-9-10,
+    .col-1-10 {
+      width: 100%;
+    }
+
+    .col-2-10 {
+      width: 100%;
+    }
+
+    .col-4-10 {
+      width: 100%;
+    }
+
+    .col-6-10 {
+      width: 100%;
+    }
+  }
+
+}
+
+.theme-inline-pills .tabs-container {
+  //width: 988px;
+  border: none;
+}
+
+.theme-inline-pills .tabs-container .tab-pane {
+  padding: 0.5em 0 0.1em;
+}
+
+.createNewClass {
+  //font-size: 17px;
+  width: 165px;
+  height: 47px;
+}
+
+.active-fontSize {
+  font-size: 15px;
+}
+
+.messageSize {
+  font-size: 13px;
+}
+
+.title-fontSize {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.selectButton {
+  font-size: 13px;
+  font-weight: normal;
+  span {
+    padding-right: 5px;
+  }
+}

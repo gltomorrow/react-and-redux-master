@@ -1,0 +1,39 @@
+@import "../../node_modules/uitoolkit/uitoolkit/src/main/resources/core/styles/mixins.less";
+@import "compensationRules";
+@import "compensationSetting";
+@import "compensationSettingCard";
+@import "detailName";
+@import "detailsInMobile";
+@import "internalMessage";
+@import "sample";
+
+.epc-page {
+  .margin(tr, @baseFontPx, 18, 18);
+  .margin(l, @baseFontPx, 18);
+  @media screen and (max-width: 959px) {
+    .margin(tr, @baseFontPx, 12, 12);
+    .margin(l, @baseFontPx, 12);
+  }
+}
+
+body {
+  background: #ededed;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+  padding: 10px;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.default-title {
+  color: #1f1f1f;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  font-size: 20px;
+}
