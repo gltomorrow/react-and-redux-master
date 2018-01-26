@@ -5,7 +5,7 @@ class ListStaffComponent extends React.Component {
     render() {
         return (
             <div className="epc-page-container">
-                <main role="main" classNam="main">
+                <main role="main" className="main">
                     <div className="epc-page cf">
                         <div className="default-title"><span className="loc-text">Compensation Rules</span></div>
                         <div className="message-contain">
