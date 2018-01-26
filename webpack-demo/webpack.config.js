@@ -7,6 +7,8 @@ const SRC = path.resolve(__dirname, 'src');
 const VENDOR_MODULES = ['react', 'react-dom', 'react-redux', 'redux', 'redux-logger', 'redux-thunk', 'moment'];
 const APP_ENTRY_POINT =  `${SRC}/index.js`;
 
+const appHtml = path.resolve(__dirname, 'public/index.html');
+
 module.exports = {
     entry: {
         app: './src/index.js',
@@ -18,7 +20,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Development'
+            inject: true,
+            template: appHtml
         })
     ],
     resolve: {
