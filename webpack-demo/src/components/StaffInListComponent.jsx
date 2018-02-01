@@ -1,66 +1,60 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import StaffViewComponent from './StaffViewComponent.jsx';
+import StaffViewButtonMenuComponent from './StaffViewButtonMenuComponent.jsx';
 
 class StaffInListComponent extends React.Component {
+    getViewButton(){
+        return(
+            <StaffViewButtonMenuComponent/>
+        );
+    }
     render() {
+        const mockState = {
+            staff:[
+                {
+                    name: 'Ling Feng Ran',
+                    mail: 'lran@expedia.com',
+                    employeeID: 67894,
+                    base: 'Beijing',
+                    hireDate: '02/22/2016',
+                    location: 'CHN0002 - Beijing - Expedia',
+                    company: '11596 Expedia Consulting Svc (Beijing)'
+                },
+                {
+                    name: 'xxxxxxxxxxxxx',
+                    mail: 'lran@expedia.com',
+                    employeeID: 67894,
+                    base: 'Beijing',
+                    hireDate: '02/22/2016',
+                    location: 'CHN0002 - Beijing - Expedia',
+                    company: '11596 Expedia Consulting Svc (Beijing)'
+                },
+                {
+                    name: 'xxxxxxxxxxxxx',
+                    mail: 'lran@expedia.com',
+                    employeeID: 67894,
+                    base: 'Shenzhen',
+                    hireDate: '02/22/2016',
+                    location: 'CHN0002 - Beijing - Expedia',
+                    company: '11596 Expedia Consulting Svc (Beijing)'
+                }
+            ]
+        };
+        const staffView = mockState.staff.map(
+            function (staff, index){
+                return (
+                    <div className="cols-row compensation-rule">
+                        <StaffViewComponent staff={staff}/>
+                        <StaffViewButtonMenuComponent/>
+                    </div>
+                )
+            }
+        );
         return (
             <div>
                 <section className="tab-pane" styleA="display: none;">
-                    <div className="cols-row compensation-rule">
-                        <div className="col col-9-10">
-                            <div className="header">
-                                <div>25% to 20% Commission Pricing-test2</div>
-                            </div>
-                            <div className="body">
-                                <div>
-                                    <span>Hotel collect: 20% | Applies to 0  rate plan</span>
-                                </div>
-                            </div>
-                            <div className="footer">
-                                <div><span><span className="icon icon-time undefined"
-                                                 aria-hidden="true"></span> This rule has 1 date specific setting</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col col-1-10">
-                                        <span>
-                                            <div className="active-fontSize">
-                                                <div className="menu-bar " id="epc-q7t001e">
-                                                    <ul className="menu-bar-inner">
-                                                        <li className="">
-                                                            <button type="button" data-control="menu"
-                                                                    data-auto-pos="true"
-                                                                    className="menu-trigger theme-standard trigger-link pin-left btn-text menu-arrow"
-                                                                    aria-expanded="false"><span className="btn-label">Actions<span
-                                                                className="icon icon-toggle180 "
-                                                                aria-hidden="true"></span></span></button>
-                                                            <div className="menu" aria-hidden="true" tabIndex="0">
-                                                                <div className="menu-main">
-                                                                    <div>
-                                                                        <button type="button"
-                                                                                className="btn-primary btn-text"><span
-                                                                            className="btn-label"><span
-                                                                            className="loc-text">View Details</span></span>
-                                                                        </button>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div>
-                                                                            <button type="button"
-                                                                                    className="btn-primary btn-text"><span
-                                                                                className="btn-label"><span
-                                                                                className="loc-text">Edit</span></span>
-                                                                            </button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </span>
-                        </div>
-                    </div>
+                        {staffView}
                 </section>
             </div>
         );

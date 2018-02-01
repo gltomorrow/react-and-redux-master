@@ -7,11 +7,11 @@ class StaffTabInListComponent extends React.Component {
             <ul className="tabs cf">
                 <li role="presentation" className="tab">
                     <button type="button" className="on"><span
-                        className="tab-label active-fontSize">Active</span></button>
+                        className="tab-label active-fontSize">Beijing</span></button>
                 </li>
                 <li role="presentation" className="tab">
                     <button type="button" className=""><span
-                        className="tab-label active-fontSize">Inactive</span></button>
+                        className="tab-label active-fontSize">Shenzhen</span></button>
                 </li>
             </ul>
         );
